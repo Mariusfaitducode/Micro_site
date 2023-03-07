@@ -1,36 +1,219 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Prompt:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    height: 100%;
+    scroll-behavior: smooth;
+}
 
 body{
     text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin: 0;
+    font-family: 'Prompt', sans-serif;
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
 
+    color: white;
+    background: #202731;
+    margin: 0;
+    height: 100%;
+
+    overflow-x: hidden;
 }
 
-h1, h2{
-    margin: 3rem;
+section{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+}
+
+h1{
+    font-size: 4rem;
+}
+
+p{
+    font-size: 2rem;
+}
+
+:root{
+    --col-sect-1:#3c31dd;
+    --col-sect-2:#6963c0;
+    --col-sect-3:#ff0066;
+}
+
+.title{
+    background: var(--col-sect-1);
+    min-height: 400px;
+    padding: 150px 20vw;
+    padding-bottom: 250px;
+}
+
+.texte{
+    height: auto;
+    padding: 100px 20vw;
+    padding-bottom: 0;
+    background: var(--col-sect-2)
+    
+}
+
+.music-menu{
+    background: var(--col-sect-3);
 }
 
 .grid{
 
     display:flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
+    padding: 100px 0;
 }
 
-.music-link{
+.card{
+    position: relative;
+    
+}
+
+.card img{
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.786);
+}
+
+.card__overlay.green{
+    background: rgba(34, 244, 11, 0.5);
+}
+.card__overlay.red{
+    background: rgba(244, 11, 213, 0.5);
+}
+.card__overlay.dark{
+    background: rgba(226, 200, 1, 0.641);
+}
+
+.card__overlay{
+    /* display: none; */
+    position: absolute;
+    opacity: 0;
+    
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transition: all ease-in-out .3s;
+}
+
+
+
+.card__overlay:hover{
+    /* display: block; */
+    opacity: 1;
+}
+
+.card__overlay h2{
+    font-size: 3rem;
+    color: white;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    
+}
+
+
+
+
+
+
+/* Curves */
+
+.custom-shape-divider-bottom-1678210754 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1678210754 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 106px;
+}
+
+.custom-shape-divider-bottom-1678210754 .shape-fill {
+    /* fill: #dd3f31; */
+    fill: var(--col-sect-2)
+}
+
+.spacer{
+    aspect-ratio: 900/300;
+    /* max-height: 200px; */
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.layer{
+    background-image: url('./layer3.svg');
+}
+
+.spacer svg{
+    fill: white;
+    margin-top: 3rem;
+}
+
+
+
+
+
+
+/* h1, h2{
+    margin: 3rem;
+} */
+
+/* header{
+    background-color: rgb(46, 228, 228);
+    padding: 50px;
+}
+
+section{
+    background-color: rgb(228, 222, 46);
+    padding: 100px;
+}
+
+footer{
+    background-color: rgb(228, 131, 46);
+    padding: 80px;
+
+} */
+
+
+
+
+
+/* .music-link{
     display: flex;
     margin-bottom: 2rem;
 }
 
 .music-link h2{
     padding-bottom: 3rem;
-    /* padding-left: 0.5rem; */
+    padding-left: 0.5rem;
 }
 
 
 .music-link svg{
-    /* background-color: #000; */
+    background-color: #000;
     width: 42px;
     height: 42px;
     fill: black;
@@ -47,10 +230,10 @@ h1, h2{
 .music-link svg:hover{
     background: black;
     fill: white;
-}
+} */
 
 /* Acceuil */
-
+/* 
 .index h1{
 
     background-color: blueviolet;
@@ -69,11 +252,11 @@ h1, h2{
     padding: 2rem;
 
     border: 5px solid #333;
-}
+} */
 
 /* Winnterzuko */
 
-.winnter{
+/* .winnter{
 
     background-color: lightblue;
 
@@ -82,5 +265,5 @@ h1, h2{
 .winnter img{
     margin-top: 3rem;
     width: 30%;
-}
+} */
 
